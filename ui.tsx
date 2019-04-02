@@ -170,8 +170,8 @@ class UI extends React.Component {
 
 				<div>
 					Hiding first {this.startLevel} levels{" "}
-					<button onClick={e => this.startLevel--}>-</button>
-					<button onClick={e => this.startLevel++}>+</button>
+					<button onClick={e => Math.max(--this.startLevel, 0)}>-</button>
+					<button onClick={e => Math.min(++this.startLevel, 8)}>+</button>
 				</div>
 				<div>
 					<label>
